@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="scopt_2.11-3.3.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../spark-2.0.0-bin-hadoop2.7/jarsofexample/scopt_2.11-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../spark-2.0.0-bin-hadoop2.7/jarsofexample/spark-examples_2.11-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
