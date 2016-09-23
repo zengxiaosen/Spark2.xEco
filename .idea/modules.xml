@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/beifengspark.iml" filepath="$PROJECT_DIR$/beifengspark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigdata_process_spark2.0.iml" filepath="$PROJECT_DIR$/bigdata_process_spark2.0.iml" />
     </modules>
   </component>
 </project>
