@@ -12,9 +12,7 @@ object hiveoperation {
         .enableHiveSupport()
         .config(sparkConf)
         .getOrCreate()
-    import ss.implicits._
 
-    val date = "2015-08-28" //通常通过参数传过来
 
     /*
     在hive表中
@@ -51,13 +49,20 @@ object hiveoperation {
     hour      string
      */
 
+
+    import ss.implicits._
+
+    val date = "2015-08-28" //通常通过参数传过来
+
+
     val sqlStr =
       s"""
          |insert overwrite into daily_visit partition (date='$date')    //日期,通常是通过参数传进来的
-         |select date,count(distinct guid) uv,sum(pv) pv,
+         |select count(distinct guid) uv,sum(pv) pv,
          |count(case when pv>=2 then sessionid else null end) second_num,
          |count(sessionid) visits from
          |(select ds date, sessionid, max(guid) guid, count(url) pv from tracklog and hour='18'
+         |and length(url) > 0
          |group by ds,sessionid) a
          |group by date
        """.stripMargin
